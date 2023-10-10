@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "b56dd1eb-15aa-4c22-ad78-a1f135577e8f",
+		"name": "aws_upload",
+		"description": "This a nest.js project where you can see examples of upload one file or files., filter thouse files by format or whatever you want. That project also include examples of get file\\\\files, remove file.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27302090",
+		"_collection_link": "https://winter-resonance-464045.postman.co/workspace/My-Workspace~1c45578c-92c2-4343-82be-87968a6ddc83/collection/27302090-b56dd1eb-15aa-4c22-ad78-a1f135577e8f?action=share&source=collection_link&creator=27302090"
+	},
+	"item": [
+		{
+			"name": "Upload file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/lilandre/Downloads/management.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{SERVER}}/upload/file",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"upload",
+						"file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload files",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": [
+								"/C:/Users/lilandre/Downloads/logo_inner-1_ima.png",
+								"/C:/Users/lilandre/Downloads/logo_inner-1_bigger.jpg"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "{{SERVER}}/upload/files",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"upload",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/lilandre/Downloads/logo_inner 1.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{SERVER}}/upload/photo",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"upload",
+						"photo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload photos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/lilandre/Downloads/response_1696866670284.json"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{SERVER}}/upload/photos",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"upload",
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of files",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/upload/",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove file",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/upload/medialogo_inner-1_bigger-3cc2.jpg",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"upload",
+						"medialogo_inner-1_bigger-3cc2.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "SERVER",
+			"value": "http://localhost:3003",
+			"type": "string"
+		}
+	]
+}
