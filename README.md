@@ -1,7 +1,7 @@
 
 ## Title
 
-This [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository comes with AWS S3 Bucket examples.
+This repository is a NestJS project showcasing implementations for uploading, retrieving, and deleting files from an AWS S3 Bucket
 
 
 ##  Description
