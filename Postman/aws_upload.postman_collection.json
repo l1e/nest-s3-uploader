@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "b56dd1eb-15aa-4c22-ad78-a1f135577e8f",
 		"name": "aws_upload",
-		"description": "This a nest.js project where you can see examples of upload one file or files., filter thouse files by format or whatever you want. That project also include examples of get file\\\\files, remove file.",
+		"description": "This is a NestJS project that includes examples of uploading one or multiple files, filtering those files by format or other criteria, retrieving files, and removing files.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "27302090",
 		"_collection_link": "https://winter-resonance-464045.postman.co/workspace/My-Workspace~1c45578c-92c2-4343-82be-87968a6ddc83/collection/27302090-b56dd1eb-15aa-4c22-ad78-a1f135577e8f?action=share&source=collection_link&creator=27302090"
@@ -19,7 +19,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/C:/Users/lilandre/Downloads/management.jpg"
+							"src": "/C:/Users/l1e/Downloads/management.jpg"
 						}
 					]
 				},
@@ -48,8 +48,8 @@
 							"key": "file",
 							"type": "file",
 							"src": [
-								"/C:/Users/lilandre/Downloads/logo_inner-1_ima.png",
-								"/C:/Users/lilandre/Downloads/logo_inner-1_bigger.jpg"
+								"/C:/Users/l1e/Downloads/logo_inner-1_ima.png",
+								"/C:/Users/l1e/Downloads/logo_inner-1_bigger.jpg"
 							]
 						}
 					]
@@ -78,7 +78,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/C:/Users/lilandre/Downloads/logo_inner 1.png"
+							"src": "/C:/Users/l1e/Downloads/logo_inner 1.png"
 						}
 					]
 				},
@@ -106,7 +106,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/C:/Users/lilandre/Downloads/response_1696866670284.json"
+							"src": "/C:/Users/l1e/Downloads/response_1696866670284.json"
 						}
 					]
 				},

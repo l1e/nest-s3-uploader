@@ -1,11 +1,16 @@
 import { extname } from 'path';
-
 import { Request } from 'express';
 import { HttpException, HttpStatus } from '@nestjs/common';
 
+/**
+ * Filter function for validating file types.
+ * @param req - The request object.
+ * @param file - The file object.
+ * @param callback - The callback function to indicate success or failure.
+ */
 export const ImgFileFilter = (req, file, callback) => {
 
-    console.log('ImgFileFilter', file);
+    // console.log('ImgFileFilter', file);
 
     const allowedExtensions = /\.(png|jpg|gif|webp|svg|jpeg|pdf)$/; // Case-insensitive regex for allowed extensions
 
@@ -17,6 +22,12 @@ export const ImgFileFilter = (req, file, callback) => {
     callback(null, true);
 };
 
+/**
+ * Generates a unique file name by appending a random string to the original file name.
+ * @param req - The request object.
+ * @param file - The file object.
+ * @param callback - The callback function to return the new file name.
+ */
 export const editFileName = (
     req: Request,
     file: Express.Multer.File,
