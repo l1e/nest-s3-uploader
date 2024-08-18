@@ -44,9 +44,6 @@ export class UploadService {
                 throw new HttpException('Error while uploading image/file to bucket', HttpStatus.BAD_REQUEST)
             }
         } catch (error) {
-            // Log and throw detailed errors
-            console.error('Error uploading file to S3:', error);
-
             if (error.code === 'ENOENT') {
                 throw new HttpException('File not found', HttpStatus.NOT_FOUND);
             } else {
@@ -71,7 +68,7 @@ export class UploadService {
 
             return listOfFiles;
         } catch (error) {
-            throw new HttpException('Error retrieving media files from S3', HttpStatus.INTERNAL_SERVER_ERROR);
+            throw new HttpException('Error with retrieving files from S3', HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -105,11 +102,11 @@ export class UploadService {
             if (toRemoveFromS3['$metadata'].httpStatusCode === 204) {
                 return 'The file was deleted';
             } else {
-                throw new HttpException('Error while uploading image/file to bucket', HttpStatus.BAD_REQUEST)
+                throw new HttpException('Error while deleting file from bucket', HttpStatus.BAD_REQUEST)
             }
 
         } else {
-            return `We were not able to find a file ${name}`
+            return `File not found: ${name}`
         }
 
     }
