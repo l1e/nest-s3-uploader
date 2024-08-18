@@ -1,5 +1,5 @@
 
-## NestJS S3 Uploader
+## NestJS S3 File Uploader
 
 This repository is a NestJS project showcasing implementations for uploading, retrieving, and deleting files from an AWS S3 Bucket
 
