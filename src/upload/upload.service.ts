@@ -24,6 +24,7 @@ export class UploadService {
         if (typeof data !== 'object' || !data.file_name_new) {
             throw new HttpException('Invalid file data provided', HttpStatus.BAD_REQUEST);
         }
+
         let filename_updated = data.file_name_new
         const newPath = folder + '/' + filename_updated;
         let teporaryPath = '../../' + process.env.TEMPORARY_LOCAL_FOLDER + '/';
@@ -59,6 +60,7 @@ export class UploadService {
     * @param {string} folder - The folder in the S3 bucket where the files are stored.
     */
     async getAllFiles(folder: string): Promise<ListObjectsV2CommandOutput> {
+
         try {
             const listOfFiles = await this.s3.listObjectsV2({
                 Bucket: process.env.AWS_S3_BUCKET_NAME,
@@ -67,9 +69,11 @@ export class UploadService {
             });
 
             return listOfFiles;
+
         } catch (error) {
             throw new HttpException('Error with retrieving files from S3', HttpStatus.INTERNAL_SERVER_ERROR);
         }
+
     }
 
 

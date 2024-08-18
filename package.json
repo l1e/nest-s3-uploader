@@ -1,6 +1,6 @@
 {
   "name": "aws_upload_file",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Here are code examples for uploading, retrieving, and removing files from an AWS S3 bucket using NestJS",
   "author": "l1e",
   "private": true,
